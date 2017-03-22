@@ -1,0 +1,22 @@
+{
+  "name": "FUDGE",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "FUDGE: Filtering pUblic Discord Github wEbhooks - Preventing spam in public Discord GitHub webhooks",
+  "main": "index.js",
+  "keywords": [
+    "api", "filter", "spam prevention",
+    "server", "panel", "management",
+    "control", "dashboard", "administration",
+    "webhook", "discord", "github"
+  ],
+  "author": "CMDiscord Organization",
+  "dependencies": {
+    "express": "^3.10.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CMDiscord/FUDGE.git"
+  },
+  "homepage": "http://auth.spikespaz.com/fudge"
+}
