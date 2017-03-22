@@ -1,0 +1,8 @@
+{
+  "name": "FUDGE - Webhook Filter",
+  "host": null,
+  "port": 80,
+  "base": "http://auth.spikespaz.com/fudge",
+  "endpoint": "/github",
+  "webhook": "https://discordapp.com/api/webhooks/<redacted>/<redacted>/github"
+}
