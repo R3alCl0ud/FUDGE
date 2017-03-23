@@ -5,13 +5,22 @@
   "description": "FUDGE: Filtering pUblic Discord Github wEbhooks - Preventing spam in public Discord GitHub webhooks",
   "main": "index.js",
   "keywords": [
-    "api", "filter", "spam prevention",
-    "server", "panel", "management",
-    "control", "dashboard", "administration",
-    "webhook", "discord", "github"
+    "api",
+    "filter",
+    "spam prevention",
+    "server",
+    "panel",
+    "management",
+    "control",
+    "dashboard",
+    "administration",
+    "webhook",
+    "discord",
+    "github"
   ],
   "author": "CMDiscord Organization",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^3.10.10"
   },
   "repository": {

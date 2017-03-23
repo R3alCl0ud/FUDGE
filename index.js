@@ -1,14 +1,20 @@
 const express = require("express");
+const parser = require("body-parser");
 const app = express();
 // This is the file that you have to create.
 // Copy the template in the current directory.
 const config = require("./_config.json");
-
+const fs = require("fs");
 
 // Defaults for host and port if null.
-if (!config.host) {config.host = "localhost"}
-if (!config.port) {config.port = 80}
+if (!config.host) {
+    config.host = "localhost"
+}
+if (!config.port) {
+    config.port = 80
+}
 
+app.use(config.base + config.endpoint, parser.json({ type: "application/json" }));
 
 // Main page.
 app.get(config.base, (request, response) => {
@@ -18,7 +24,21 @@ app.get(config.base, (request, response) => {
 
 // Handle POST requests.
 app.post(config.base + config.endpoint, (request, response) => {
-    response.send(request);
+    fs.readFile("pending.json", "utf8", (error, data) => {
+        if (error) {
+            console.log(error);
+        } else {
+            let pending = JSON.parse(data);
+            pending[request.body.id] = request.body;
+            fs.writeFile("pending.json", JSON.stringify(pending), "utf8", (error) => {
+                if (error) {
+                    console.log(error);
+                }
+            });
+        }
+    });
+    // Response OK
+    response.send(200);
 });
 
 
