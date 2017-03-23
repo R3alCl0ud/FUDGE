@@ -5,5 +5,7 @@
   "url": "http://auth.spikespaz.com/fudge",
   "base": "/fudge",
   "endpoint": "/github",
-  "webhook": "https://discordapp.com/api/webhooks/<redacted>/<redacted>/github"
+  "webhook": "https://discordapp.com/api/webhooks/<redacted>/<redacted>/github",
+  "clientID": "<redacted>",
+  "clientSecret": "<redacted>"
 }
