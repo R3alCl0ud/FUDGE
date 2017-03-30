@@ -7,8 +7,6 @@ const express = require('express'),
 var router = express.Router();
 const config = require("../_config.json");
 
-console.log(express)
-
 router.use(bodyParser.json()); // support json encoded bodies
 router.use(bodyParser.urlencoded({extended: true}));
 
@@ -52,9 +50,13 @@ router.get('/callback',
   }),
   function(req, res) {
     console.log(req.query);
-    res.redirect('../')
+    res.redirect('/info')
   } // auth success
 );
+
+router.get('/info', (req, res) => {
+  res.json(req.user);
+})
 
 
 module.exports = router;
